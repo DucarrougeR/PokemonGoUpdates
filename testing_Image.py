@@ -2,9 +2,6 @@
 
 '''
 1- get the browser to open map 
-	1.1 online 
-	or 
-	1.2 from local machine Flask app
 2- get a screenshot of the map
 3- email this to email address
 '''
@@ -28,7 +25,6 @@ d1 = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
 
 
 def open_website(url):
-<<<<<<< HEAD
 	# use selenium for Chrome
 	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
 	# maximize browser window
@@ -54,7 +50,6 @@ def open_website(url):
 
 		
 	
-=======
         # use selenium for Chrome
         browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\Chrome\chromedriver.exe")
         # maximize browser windos
@@ -103,8 +98,6 @@ def open_website(url):
         # Save directly to photos directory
         img.save(target_file)	
 
-
-
         ''' Can be improved by saving directly to the folder "\\photos" '''
         #	for file in os.listdir("C:\\Users\\Romain\\Desktop\\PokemonGoUpdates"):
         #		if file.endswith(".png"):
@@ -112,18 +105,11 @@ def open_website(url):
         #			dest = "C:\\Users\\Romain\\Desktop\\PokemonGoUpdates\\photos\\" + name
         #			shutil.move(src, dest)	
 
->>>>>>> b0b1a119a3e5e0581c998869f3ef04bc5af306ef
-def download_image():
-	''' function to download an image from url '''
-	
-def move_image_to_folder():
-	''' move png file to 'photos' folder'''
-
 def send_image_to_email():
 	''' use smtplib from gmail to gmail '''  
 
-	to = 'abc.def@gmail.com'
-	gmail_user = 'abc.def@gmail.com'
+	to = 'abc@gmail.com'
+	gmail_user = 'abc@gmail.com'
 	gmail_pwd = ''
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserver.ehlo()
@@ -137,9 +123,8 @@ def send_image_to_email():
 	print ('done!')
 	smtpserver.close()
 
-#open_website(URL)	
-#download_image(URL)
-<<<<<<< HEAD
+open_website(URL)	
+download_image(URL)
+
 send_image_to_email()
-=======
->>>>>>> b0b1a119a3e5e0581c998869f3ef04bc5af306ef
+
