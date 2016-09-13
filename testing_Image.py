@@ -57,19 +57,14 @@ def open_website(url):
         browser.get(url)
 
         # --- Michael ---
-        # Not sure if sleep needed. I think the above command only completes once the page loads.
-        # Therefore the screenshot won't be taken until page is loaded anyway.
-
-        # wait for map to load
+        # Not sure if sleep needed. Eventually wait for map to load:
         #time.sleep(3)
 
         # generate printscreen
         img = ImageGrab.grab()
 
-
         # save as: "date""format"
         #name = str(d1)+".png"
-
 
         # --- Michael ---
         # Create "photos" directory.
@@ -97,13 +92,7 @@ def open_website(url):
 
         # Save directly to photos directory
         img.save(target_file)	
-
-        ''' Can be improved by saving directly to the folder "\\photos" '''
-        #	for file in os.listdir("C:\\Users\\Romain\\Desktop\\PokemonGoUpdates"):
-        #		if file.endswith(".png"):
-        #			src = "C:\\Users\\Romain\\Desktop\\PokemonGoUpdates\\" + name
-        #			dest = "C:\\Users\\Romain\\Desktop\\PokemonGoUpdates\\photos\\" + name
-        #			shutil.move(src, dest)	
+	
 
 def send_image_to_email():
 	''' use smtplib from gmail to gmail '''  
